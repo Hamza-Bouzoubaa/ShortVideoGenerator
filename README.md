@@ -37,9 +37,9 @@ Turn lengthy videos into engaging short clips with ease! The Short Videos Genera
 
 Here are some examples of short videos generated using the Short Videos Generator:
 
-- **Inspirational/Motivational**: [Example ](#inspirationalmotivational-example)
+- **Inspirational/Motivational**: [Example ](#Inspirationalmotivational-example)
 - **Funny**: [Example ](#)
-- **Informative/Documentary**: [Example ](#Informative/Documentary-example)
+- **Informative/Documentary**: [Example ](#InformativeDocumentary-example)
 
 ## Inspirational/Motivational example:
 
@@ -48,7 +48,10 @@ https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/8c9379ff
 
 ## Informative/Documentary example:
 
-https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/7889219a-9354-4f59-a5ee-21ed6d4c6ba9
+
+https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/1999af29-02c8-4a86-9e86-7e8a3e39ba5f
+
+
 
 
 ---
