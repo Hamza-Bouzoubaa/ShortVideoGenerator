@@ -37,11 +37,19 @@ Turn lengthy videos into engaging short clips with ease! The Short Videos Genera
 
 Here are some examples of short videos generated using the Short Videos Generator:
 
-- **Inspirational/Motivational**: [Example 1](#), [Example 2](#), [Example 3](#)
-- **Funny**: [Example 1](#), [Example 2](#), [Example 3](#)
-- **Informative/Documentary**: [Example 1](#), [Example 2](#), [Example 3](#)
+- **Inspirational/Motivational**: [Example ](#Inspirational/Motivational)
+- **Funny**: [Example ](#)
+- **Informative/Documentary**: [Example ](#Informative/Documentary)
 
-Feel free to share your own examples and use cases with the community.
+## Inspirational/Motivational example:
+
+
+https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/8c9379ff-2092-4650-b542-c829de327ba5
+
+## Informative/Documentary example:
+
+https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/7889219a-9354-4f59-a5ee-21ed6d4c6ba9
+
 
 ---
 
@@ -50,7 +58,8 @@ Feel free to share your own examples and use cases with the community.
 Before using the Short Videos Generator, make sure you have the following requirements in place:
 
 - An internet connection to access the necessary APIs and services.
-- A Whisper ASR API key, which you can obtain from [Whisper ASR](https://whisper.openai.com/).
+- An open AI API key can be obtained from [Whisper ASR](https://openai.com/).
+- Install all requirements.
 - Access to ChatGPT-4 API for content selection.
 - Video editing software for finalizing the generated short videos.
 
@@ -63,7 +72,7 @@ To install the Short Videos Generator, follow these steps:
 1. Clone the repository from GitHub:
 
    ```bash
-   git clone https://github.com/yourusername/short-videos-generator.git
+   git clone https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator.git
    ```
 
 2. Navigate to the project directory:
@@ -82,21 +91,8 @@ To install the Short Videos Generator, follow these steps:
 
 ---
 
-## Usage
-
-1. Run the script by providing the link to the long video:
-
-   ```bash
-   python generate_short_videos.py --video-link https://www.example.com/your-long-video
-   ```
-
-2. Follow the on-screen prompts to select the type of content you want (Inspirational/Motivational, Funny, Informative/Documentary).
-
-3. Wait for the Short Videos Generator to process the video, cut, edit, and generate the short videos.
-
-4. Find the generated short videos in the output folder and feel free to share them on your favorite platforms.
-
----
+Need help using it?:
+Pls contact me on LinkedIn : https://www.linkedin.com/in/hamza-bouzoubaa-47b918224/
 
 ## License
 
