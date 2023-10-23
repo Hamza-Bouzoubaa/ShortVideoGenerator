@@ -3,7 +3,7 @@ from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import pandas as pd
 import moviepy.editor as mp
 import openai
-api_key = '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'
+api_key = 'Your Open AI Key'
 openai.api_key = api_key
 from TikTokUpload import TiktokUploads
 import os
@@ -118,7 +118,7 @@ def FindClip(text):
     
 
     # Create a dataset using GPT
-    response = openai.ChatCompletion.create(model="gpt-4",
+    response = openai.ChatCompletion.create(model="gpt-4",i
                                             messages=[{"role": "system", "content": system_msg},
                                                       {"role": "user", "content": user_msg}])
 
@@ -363,14 +363,11 @@ def split_text_tokens(text, max_tokens_per_segment):
 
     return segments
 
-#videoPath = download_highest_resolution("https://www.youtube.com/watch?v=GdHW1YipmVo&ab_channel=EdMylett")
-videoPath = "videos/5589af0d-048a-446e-ab8b-3b22ffb7b19a.mp4"
-#text = AudioToText("videos/audio.mp3","small")
+videoPath = download_highest_resolution("Video Link")
+text = AudioToText("videos/audio.mp3","small")  # can change to tiny/medium/large
 text = GetTextDataFrame()
 texts = split_text_tokens(text,10000)
-print(len(texts))
-for i in range (4,len(texts),1):
-    print(len(texts[i]))
+for i in range (0,len(texts),1):
     segments = FindClip(texts[i])
     print(segments)
     SavingSegmentsToDataframe(segments)
