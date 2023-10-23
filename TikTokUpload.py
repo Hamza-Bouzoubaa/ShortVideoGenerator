@@ -1,8 +1,8 @@
 from Tiktok_uploader import uploadVideo
 
 
-def TiktokUploads(VidPath,title):
-    session_id = "Your Session ID"
+def TiktokUploads(SessionID,VidPath,title):
+    session_id = SessionID
     file = VidPath
     title = title
     tags = ["fyp"]

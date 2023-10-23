@@ -1,0 +1,6 @@
+pytube==11.0.1
+moviepy==1.0.3
+pandas==1.3.3
+openai==0.27.0
+TikTokUploads==1.2.1
+whisper==0.9.0

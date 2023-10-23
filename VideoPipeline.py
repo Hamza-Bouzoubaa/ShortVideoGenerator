@@ -3,8 +3,7 @@ from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import pandas as pd
 import moviepy.editor as mp
 import openai
-api_key = 'Your Open AI Key'
-openai.api_key = api_key
+
 from TikTokUpload import TiktokUploads
 import os
 import uuid
@@ -71,9 +70,9 @@ def download_highest_resolution(video_url):
     return video_file_path
 
 
-def FindClip(text):
+def FindClip(Key,text):
         
-    openai.api_key = api_key
+    openai.api_key = Key
 
     # Define the system message
     system_msg = "Your are a professional content creator."
@@ -83,31 +82,22 @@ def FindClip(text):
     1. The clips should be distinct and self-contained, with a minimum duration of 30s and max of 120s.
     2. Each segment should be engaging and have the potential to go viral.
     3. Categorize each clip into one of the following types: Inspirational/Motivational, Funny, or Informative/Documentary.
-    4. Rate each clip out of 10 based on the following criteria:
-        a. Understandability: 
-        b. Engagement: 
-        c. Narrative Flow: 
-        d. Relevance
-        e. Originality
-        f. Entertainment Value
-        g. Information Value
-        h. Humor (for Funny clips)
-        i. Inspirational Impact (for Inspirational/Motivational clips)
+        
 
     To ensure a seamless viewing experience, select natural breaks or pauses in the conversation to determine the start and end times for each segment. Additionally, provide a meaningful video title that best represents the content of that segment.
 
     Here's the format I need for the output:
 
-    | Start Time (s) | End Time (s) | Video Title | Clip Type | Quality Rating (out of 10) |  Duration (30+)
-    |----------------|------------|------------|-----------|---------------------------|
+    | Start Time (s) | End Time (s) | Video Title | Clip Type | 
+    |----------------|------------|------------|-----------|
 
     For example:
     best clips:
-    | 30.2s | 64.3s | "Achieving the Impossible" | Inspirational | 8.5 | 35s
-    | 150s | 190s | "Hilarious Comedy Skit" | Funny | 9.2 |  45s
-    |----------------|------------|------------|-----------|---------------------------|
+    | 30.2s | 64.3s | "Achieving the Impossible" | Inspirational |
+    | 150s | 190s | "Hilarious Comedy Skit" | Funny |
+    |------|----------|------------------------|-----------|
 
-    After rating each clip, please provide me with the three clips that received the highest quality ratings.
+    Please provide me with the best clips.
 
     Thank you for your assistance!"""
 
@@ -118,7 +108,7 @@ def FindClip(text):
     
 
     # Create a dataset using GPT
-    response = openai.ChatCompletion.create(model="gpt-4",i
+    response = openai.ChatCompletion.create(model="gpt-4",
                                             messages=[{"role": "system", "content": system_msg},
                                                       {"role": "user", "content": user_msg}])
 
@@ -306,26 +296,26 @@ def generate_and_burn_subtitles(video_path, excel_file, output_video_path):
 
 
 
-def TiktokCuterAndSubs(NumberOfSegments):
+def TiktokCuterAndSubs(TiktokCuterAndSubs,NumberOfSegments):
     videos = []
     for i in range(NumberOfSegments):
         videoId = uuid.uuid4()
         FormatForTikTok(f"segments/segment{i}.mp4", f"segments/TiktokSegment{i}.mp4")
         generate_and_burn_subtitles(f"segments/TiktokSegment{i}.mp4",f"output_dataframes/sub_dataframe_{i+1}.xlsx",f"FinalVids/video{i}{videoId}.mp4")
-        UploadVideosTiktok(f"FinalVids/video{i}{videoId}.mp4",i)
+        UploadVideosTiktok(TiktokCuterAndSubs,f"FinalVids/video{i}{videoId}.mp4",i)
         videos.append(f"FinalVids/video{i}{videoId}.mp4")
 
     return videos
 
 
 
-def UploadVideosTiktok(Video,i):
+def UploadVideosTiktok(TiktokCuterAndSubs,Video,i):
     titles=[]
     df = pd.read_excel("segments.xlsx")
     for k in range(1,len(df["title"]),1):
         titles.append(df["title"][k])
     print(titles[i])
-    TiktokUploads(Video,titles[i])
+    TiktokUploads(TiktokCuterAndSubs,Video,titles[i])
 
  # You can replace with a different language model if needed
 
@@ -362,19 +352,20 @@ def split_text_tokens(text, max_tokens_per_segment):
         segments.append(' '.join(current_segment))
 
     return segments
-
-videoPath = download_highest_resolution("Video Link")
-text = AudioToText("videos/audio.mp3","small")  # can change to tiny/medium/large
-text = GetTextDataFrame()
-texts = split_text_tokens(text,10000)
-for i in range (0,len(texts),1):
-    segments = FindClip(texts[i])
-    print(segments)
-    SavingSegmentsToDataframe(segments)
-    data_frames = CreateSubDataFrames("DataFrame.xlsx", "Segments.xlsx", "output_dataframes")
-    Segments = CutSegments("Segments.xlsx", videoPath)
-    VideosPath = TiktokCuterAndSubs(Segments)
+def pipeline(OpenAIKey,TikTokSessionID,videoURL): 
     
+    videoPath = download_highest_resolution(videoURL)
+    text = AudioToText("videos/audio.mp3","small")  # can change to tiny/medium/large
+    text = GetTextDataFrame()
+    texts = split_text_tokens(text,10000)
+    for i in range (0,len(texts),1):
+        segments = FindClip(OpenAIKey,texts[i])
+        print(segments)
+        SavingSegmentsToDataframe(segments)
+        data_frames = CreateSubDataFrames("DataFrame.xlsx", "Segments.xlsx", "output_dataframes")
+        Segments = CutSegments("Segments.xlsx", videoPath)
+        VideosPath = TiktokCuterAndSubs(TikTokSessionID,Segments)
+        
 
 
 
