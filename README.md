@@ -7,7 +7,6 @@ Turn lengthy videos into engaging short clips with ease! The Short Videos Genera
 - [Examples](#examples)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
 - [License](#license)
 
 ---
@@ -94,8 +93,8 @@ To install the Short Videos Generator, follow these steps:
 
 ---
 
-Need help using it?:
-Pls contact me on LinkedIn : https://www.linkedin.com/in/hamza-bouzoubaa-47b918224/
+Need help using it?: 
+Pls, contact me on LinkedIn: https://www.linkedin.com/in/hamza-bouzoubaa-47b918224/
 
 ## License
 
