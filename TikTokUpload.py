@@ -2,10 +2,10 @@ from Tiktok_uploader import uploadVideo
 
 
 def TiktokUploads(VidPath,title):
-    session_id = "ad1ec589663bcd13676bbfad0ef72330"
+    session_id = "Your Session ID"
     file = VidPath
     title = title
-    tags = ["crazy", "scary", "fyp"]
+    tags = ["fyp"]
     #schedule_time = 1672592400
 
     # Publish the video
