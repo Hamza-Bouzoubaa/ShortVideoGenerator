@@ -7,6 +7,7 @@ Turn lengthy videos into engaging short clips with ease! The Short Videos Genera
 - [Examples](#examples)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Usage](#Usage)
 - [License](#license)
 
 ---
@@ -108,7 +109,6 @@ Modify the variables OpenAIKEY, TikTokSessionID, and VideoURL with your own valu
 Run the modified main.py to start the generation process.
 
 ```python
-Copy code
 from VideoPipeline import pipeline
 
 OpenAIKEY = "YourKey"
@@ -116,7 +116,6 @@ TikTokSessionID = "YourID"
 VideoURL = "VideoURL"
 
 pipeline(OpenAIKEY, TikTokSessionID, VideoURL)
-
 ```
 
 Need help using it?: 
