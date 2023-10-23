@@ -43,12 +43,18 @@ Here are some examples of short videos generated using the Short Videos Generato
 ## Inspirational/Motivational example:
 
 
-https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/8c9379ff-2092-4650-b542-c829de327ba5
+
+https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/4f8b8a5f-85fd-4822-9043-095a1ff74265
+
+
+
 
 ## Informative/Documentary example:
 
 
-https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/1999af29-02c8-4a86-9e86-7e8a3e39ba5f
+
+https://github.com/Hamza-Bouzoubaa/ShortVideoGenerator/assets/104928656/7070e339-ba9e-480e-8a16-0527e2f84fcf
+
 
 
 
@@ -80,7 +86,7 @@ To install the Short Videos Generator, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-   cd short-videos-generator
+   cd shortvideogenerator
    ```
 
 3. Set up your API keys for Whisper ASR and ChatGPT-4 by creating a configuration file.
@@ -92,6 +98,26 @@ To install the Short Videos Generator, follow these steps:
    ```
 
 ---
+## Usage
+To use the Short Videos Generator, follow these steps:
+
+Open the main.py file.
+
+Modify the variables OpenAIKEY, TikTokSessionID, and VideoURL with your own values.
+
+Run the modified main.py to start the generation process.
+
+```python
+Copy code
+from VideoPipeline import pipeline
+
+OpenAIKEY = "YourKey"
+TikTokSessionID = "YourID"
+VideoURL = "VideoURL"
+
+pipeline(OpenAIKEY, TikTokSessionID, VideoURL)
+
+```
 
 Need help using it?: 
 Pls, contact me on LinkedIn: https://www.linkedin.com/in/hamza-bouzoubaa-47b918224/
