@@ -16,7 +16,7 @@ Turn lengthy videos into engaging short clips with ease! The Short Videos Genera
 
 1. **Input Video**: Start by providing a link to a long video that you want to condense into shorter, engaging clips.
 
-2. **Transcription with Whisper**: We use [Open AI](https://whisper.openai.com/) to transcribe the audio from your video. Whisper is an advanced automatic speech recognition system, making the transcription highly accurate.
+2. **Transcription with Whisper**: I use [Open AI](https://whisper.openai.com/) to transcribe the audio from your video. Whisper is an advanced automatic speech recognition system, making the transcription highly accurate.
 
 3. **ChatGPT-4 for Content Selection**: The transcriptions and timestamps are then fed into ChatGPT-4. This model, powered by OpenAI's GPT-3.5 architecture, excels at understanding and generating human-like text.
 
@@ -125,4 +125,4 @@ Pls, contact me on LinkedIn: https://www.linkedin.com/in/hamza-bouzoubaa-47b9182
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute it as per the terms of the license.
 
-We hope this project helps you create engaging short videos from long content. Feel free to contribute, report issues, or share your feedback to make it even better!
+I hope this project helps you create engaging short videos from long content. Feel free to contribute, report issues, or share your feedback to make it even better!
