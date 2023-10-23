@@ -15,7 +15,7 @@ Turn lengthy videos into engaging short clips with ease! The Short Videos Genera
 
 1. **Input Video**: Start by providing a link to a long video that you want to condense into shorter, engaging clips.
 
-2. **Transcription with Whisper**: We use [Whisper ASR](https://whisper.openai.com/) to transcribe the audio from your video. Whisper is an advanced automatic speech recognition system, making the transcription highly accurate.
+2. **Transcription with Whisper**: We use [Open AI](https://whisper.openai.com/) to transcribe the audio from your video. Whisper is an advanced automatic speech recognition system, making the transcription highly accurate.
 
 3. **ChatGPT-4 for Content Selection**: The transcriptions and timestamps are then fed into ChatGPT-4. This model, powered by OpenAI's GPT-3.5 architecture, excels at understanding and generating human-like text.
 
