@@ -1,4 +1,3 @@
-# ShortVideoGenerator
 # Short Videos Generator
 
 Turn lengthy videos into engaging short clips with ease! The Short Videos Generator is a powerful tool designed to extract the most captivating moments from long videos and create captivating, vertical-format short videos. Whether you need inspirational, funny, or informative content, this project harnesses the potential of Whisper ASR and ChatGPT-4 to streamline the process. 
